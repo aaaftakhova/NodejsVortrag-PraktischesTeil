@@ -1,0 +1,4 @@
+Hier ist eine Textdatei, die von dem Server ausgelesen wird.
+Und das ist der Text dieser Datei...
+
+Wenn ihr das jetzt lest, dann hat das Auslesen und übertragen der Daten funktioniert. Hurra! :)
