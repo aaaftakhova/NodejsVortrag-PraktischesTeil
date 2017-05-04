@@ -5,21 +5,18 @@ Hier sind die Dateien abgelegt, die als eine Sammlung von praktischen Beispielen
 Einleitung zu den Beispielen:
 Jede .js Datei stellt eine Nodejs Server-Implementierung dar und kann mit "node" Befehl (selbstverständlich nach der Nodejs Installation) ausgeführt werden. Unten sind die URLs zum Testen des jeweiligen Beispiels aufgeführt:
 
-###### serverbsp.js
-
-  http://localhost:8080/
-###### emitter.js
-
-  testen in der Konsole, URL nichth nötig
+#### serverbsp.js
+  * http://localhost:8080/
   
-###### http.js
-
-  http://localhost:8080/
+#### emitter.js
+  * testen in der Konsole, URL nichth nötig
   
-  http://localhost:8080/requestheaders
+#### http.js
+  * http://localhost:8080/
   
-  http://localhost:8080/errorpage
+  * http://localhost:8080/requestheaders
+  
+  * http://localhost:8080/errorpage
  
-###### fsstream.js
-
-  http://localhost:8080/
+#### fsstream.js
+* http://localhost:8080/
