@@ -26,21 +26,23 @@ function showRequestHeaders(request, response) {
 	response.end(json);
 }
 
+
 function showNotFoundPage(request, response) {
-	var html = '<!DOCTYPE html><html><hefunction showErrorPage(err, response) {
 	var html = '<!DOCTYPE html><html><head><title>'
-			+ 'NodeServer - 505 Server Error</title></head><body><h3>'
+			+ 'NodeServer - 404 Not Found</title></head><body><h3>'
+			+ '404 Not found</h3></body></html>';
+		response.writeHead(500, {'Content-Type': 'text/html'});
+		response.end(html);
+}
+
+function showErrorPage(err, response) {
+	var html = '<!DOCTYPE html><html><head><title>'
+			+ 'NodeServer - 500 Server Error</title></head><body><h3>'
 			+ '500 Server Error</h3>'
 			+' <p><strong> Error Message: </strong>'+ err + '</p></body></html>';
 		response.writeHead(500, {'Content-Type': 'text/html'});
 		response.end(html);
-}ad><title>'
-			+ 'NodeServer - 404 Not Found</title></head><body><h3>'
-			+ '404 Not Found</h3></body></html>';
-		response.writeHead(404, {'Content-Type': 'text/html'});
-		response.end(html);
 }
-
 
 
 server.on('request', function (request, response) {
@@ -54,6 +56,7 @@ server.on('request', function (request, response) {
 		} else if (request.url === '/errorpage') {
 			var errmsg = 'Ein Server-Fehler ist aufgetreten.';
 			showErrorPage(errmsg, response);
+			response.end('error');
 			server.emit('error', new Error(errmsg));
 		} else {
 			showNotFoundPage(request, response);
